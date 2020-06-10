@@ -8,7 +8,7 @@ const Counter = ({ dispatch, counter }) => {
   return (
     <div>
       <CounterNum counter={counter}/>
-      <button onClick={() => dispatch(increment())}>INC</button>
+      <button onClick={increment}>INC</button>
     </div>
   )
 }
@@ -18,5 +18,10 @@ const mapStateToProps = state => {
     counter: state.counter
   }
 }
+const mapDispatchToProps = dispatch => {
+  return {
+    increment: () => dispatch(increment())
+  }
+}
 
-export default connect(mapStateToProps)(Counter)
+export default connect(mapStateToProps,mapDispatchToProps)(Counter)
