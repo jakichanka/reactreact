@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const CounterNum = props => {
+const CounterNum = ({ counter }) => {
   return (
     <div>
-      <span>{ props.counter }</span>
+      <span>{ counter }</span>
     </div>
   )
 }

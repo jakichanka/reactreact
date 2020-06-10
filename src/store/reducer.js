@@ -1,17 +1,19 @@
-import { createStore } from "redux"
+import { createStore } from 'redux'
+import { INCREMENT } from './constants'
 
 const initialState = {
-  counter: 0
+  counter: 1
 }
 
 function counterReducer(state = initialState, action) {
   switch (action.type) {
     case INCREMENT:
-      return 
-        conter: state.counter + 1
+      return {
+        counter: state.counter + 1
+      }
     default:
       return state
   }
 }
 
-export const store = createStore(counterReducer)
+export const store = createStore(counterReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())

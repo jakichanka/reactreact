@@ -8,7 +8,7 @@ const Counter = ({ dispatch, counter }) => {
   return (
     <div>
       <CounterNum counter={counter}/>
-      <button onClick={increment}>INC</button>
+      <button onClick={() => increment()}>INC</button>
     </div>
   )
 }
