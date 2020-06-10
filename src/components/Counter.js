@@ -3,12 +3,11 @@ import { connect } from 'react-redux'
 import { increment } from '../store/actions'
 import CounterNum from './CounterNum'
 
-const Counter = ({ dispatch, counter }) => {
+const Counter = ({ counter, increment }) => {
   
   return (
     <div>
-      <CounterNum counter={counter}/>
-      <button onClick={() => increment()}>INC</button>
+      <CounterNum counter={counter} onClick={() => increment()}/>
     </div>
   )
 }

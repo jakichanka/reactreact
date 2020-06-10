@@ -1,10 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-const CounterNum = ({ counter }) => {
+const CounterNum = ({ counter , onClick}) => {
   return (
     <div>
       <span>{ counter }</span>
+      <button onClick={ onClick }>INC</button>
     </div>
   )
 }
